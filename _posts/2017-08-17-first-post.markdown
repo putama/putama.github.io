@@ -5,18 +5,14 @@ date:   2017-08-17 7:50:00
 categories: main
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+Hi everybody! Here is my very first blog post. I'll write mostly things I learned daily related to machine learning, computer vision, NLP, and statistics.
+Hope you will enjoy reading my writing!
 
-Jekyll also offers powerful support for code snippets:
+The following is a sample of how mathjx works:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+\\[ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} \\]
+
+\\[ \mathbf{X} = \mathcal{Z} \mathbf{P^\mathsf{T}} \\]
 
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 

@@ -1,0 +1,21 @@
+---
+layout: default
+title:  "Variational Inference Step-by-Step (Part 1: Motivation)"
+date:   2017-08-17 9:50:00
+categories: main
+---
+
+Hi everybody! For the past few days I have been struggling to study Variational Inference from many resources. I found that many textbooks jump into rigorous details even before I can quite understand the intuition behind it. I'm writing this step-by-step explanations series of post mainly for myself and for those who share the same frustation in learning the subject. Enjoy!
+
+This note will begin by discussing the reason why variational inference is useful in many applications. We will assume that some basic of probabilistic graphical models has already been covered by the reader. First we will start the discussion by considering the bayesian network below:
+
+We know that the arrows in the network indicate the conditional independence between random variables. The joint probability density function (PDF) could be factorized as the product of these local independence. Namely,
+
+\\[ P(x_1,x_2,...,x_5) = P(x_1)P(x_3\|x_1)P(x_2\|x_1)P(x_4\|x_2,x_3)P(x_5\|x_3) \\]
+
+\\[ P(x_1,x_2,...,x_5) = P(x_1) P(x_3\|x_1) \\]
+
+\\[ P(x_1) \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} \\]
+
+[jekyll-gh]: https://github.com/mojombo/jekyll
+[jekyll]:    http://jekyllrb.com
