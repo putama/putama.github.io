@@ -45,9 +45,9 @@ Next, we define $$q(Z)$$ as a probability distribution that approximate $$P(Z\mi
 \begin{equation}
 \label{eq:klproperty}
 \begin{aligned}
-\ln p(X) = \mathcal{L}(q) + KL(q\|\|p)
+\ln p(X) & = \mathcal{L}(q) + KL(q\|\|p) & & (1)
 \end{aligned}
-\end{equation}
+\end{equation} 
 \\]
 
 In general, variational inference strive to approximate $$p(Z\mid X)$$ by finding $$q(Z)$$ that minimize the $$KL(q\|p)$$. The value of the left hand side of the equation is fixed as the outcome of random variable $$X$$ is given. However, terms in the right hand side can be changed by adjusting $$q(Z)$$. Therefore, minimizing $$KL(q\|p)$$ would be equivalent to maximizing $$\mathcal{L}(q)$$ (in the next section, we will briefly show how $$\mathcal{L}$$ acts as the lower bound of KL). We will break down the terms in the right hand side to show why it is particularly more convenient to maximize $$\mathcal{L}$$ instead of minimizing $$KL(q\|p)$$.
@@ -72,8 +72,13 @@ The equivalent measure for continuous random variable could be given by just rep
 
 KL divergence gives the quantity that indicates how similar two probability distributions are to each other. The smaller the value of $$KL(p\|q)$$ is, the more similar distribution $$p$$ is, to distribution $$q$$. KL divergence defines the difference of the distributions as the distance of their entropy, well.. almost. The most straightforward expression of this intuition which one could think of would be:
 
-|  $$KL(p\|q)$$ | $$ = \mathcal{H}_q - \mathcal{H}_p $$ |
-|   |  $$ = (-\int q(x)\log q(x)) - (-\int p(x)\log p(x)) $$ |
+\\[
+\begin{aligned}
+KL(p\|\|q)
+& = \mathcal{H}_q - \mathcal{H}_p \newline
+& = (-\int q(x)\log q(x)) - (-\int p(x)\log p(x))
+\end{aligned}
+\\]
 
 However, it should be emphasized that KL divergence measures the relative distance of the two distribution, which means that they are asymmetrical. In a way, the distance from $$q$$ to $$p$$ is not the same as the distance from $$p$$ to $$q$$. To incorporate this intuition, it modified the above expression to be as follow:
 \\[
@@ -83,16 +88,66 @@ Notice that the measure of KL divergence with respect to $$p$$, would replace $$
 
 While it is easy to explain the idea of KL divergence just by looking at the above formula, people would usually provide the simplified version of it. We will show how one could simplify the equation above:
 
-|  $$KL(p\|q)$$ | $$ = \big[-\int p(x)\log q(x)\big] - \big[-\int p(x)\log p(x)\big] $$ |
-|   |  $$ = \int p(x)\log p(x)) - \int p(x)\log q(x) $$ |
-|   |  $$ = \int p(x) \Big[ \log p(x) - \log q(x) \Big] $$ |
-|   |  $$ = \int p(x) \Big[ \log \frac{p(x)}{q(x)}\Big] $$ |
-|   |  $$ = -\int p(x) \Big[ \log \frac{q(x)}{p(x)}\Big] $$ |
+\\[
+\begin{aligned}
+KL(p\|\|q)
+& = \big[-\int p(x)\log q(x)\big] - \big[-\int p(x)\log p(x)\big] \newline
+& = \int p(x)\log p(x)) - \int p(x)\log q(x) \newline
+& = \int p(x) \Big[ \log p(x) - \log q(x) \Big] \newline
+& = \int p(x) \Big[ \log \frac{p(x)}{q(x)}\Big] \newline
+& = -\int p(x) \Big[ \log \frac{q(x)}{p(x)}\Big] & \text{(equivalent form by logarithm rule)}
+\end{aligned}
+\\]
 
 ## Properties of KL-Divergence
 Knowing how KL divergence formula is derived, we could now explain the properties that it holds. The following are some useful properties of KL divergence:
 * $$KL(p\|q)$$ is always $$>=0$$. Gibbs inequality is used to show this. One simple intuition is that when $$p(x) = q(x)$$ (or in other words, they are identical distributions) then $$\log \frac{p(x)}{q(x)}$$ will be $$0$$, meaning that KL divergence values could not get any smaller then 0.
 * $$KL(p\|q)$$ is not symmetrical, meaning that $$KL(p\|q) \neq KL(q\|p)$$
+
+## Variational Inference: Main Idea
+This last section will be the gist of this first post of the series. We will now discuss about how to take all properties above to we could derive to equation (1). So let's revisit variational inference objective which find $$q(Z)$$ that approximate $$p(Z|X)$$. Now we know that KL divergence is used to measure to quality of how good the approximation is, the smaller the value is the better the approximation is. Using KL divergence formula we can derive the expression as follow:
+
+\\[
+\begin{aligned}
+KL(q(Z)\|\|p(Z|X)) {} 
+& = -\int q(Z) \Big[ \log
+\frac{p(Z\|X)}{q(Z)}\Big] \newline
+& = -\int q(Z) \Big[ \log
+\frac{p(X,Z)}{p(X)} \frac{1}{q(Z)}\Big] & \text{(by conditional prob. rule)} \newline
+& = -\int q(Z) \Big[ \log
+\frac{p(X,Z)}{q(Z)} \frac{1}{p(X)}\Big] & \text{(swapping the denominator)} \newline
+& = -\int q(Z) \Big[ \log
+\frac{p(X,Z)}{q(Z)} + \log \frac{1}{p(X)}\Big] & \text{(by logarithm rule)} \newline
+& = -\int q(Z) \Big[ \log
+\frac{p(X,Z)}{q(Z)} - \log p(X)\Big] \newline
+& = \Big[ -\int q(Z) \log
+\frac{p(X,Z)}{q(Z)}\Big] + \Big[\log p(X) \int q(Z)\Big] & \text{(by distributing the integral)} \newline
+& = \Big[ -\int q(Z) \log
+\frac{p(X,Z)}{q(Z)}\Big] + \Big[\log p(X) \Big] & \text{(probability sum to 1)}
+\end{aligned}
+\\]
+
+We finally then arrive to this equality:
+
+\\[
+\begin{aligned}
+\log p(X)
+& = KL(q(Z)\|\|p(Z\|X)) + \int q(Z) \log
+\frac{p(X,Z)}{q(Z)} \newline
+\log p(X)
+& = KL(q(Z)\|\|p(Z|X)) + \mathcal{L}
+\end{aligned}
+\\]
+
+Where $$\mathcal{L}$$ is a function that defined as: $$\mathcal{L} = \int q(Z) \log \frac{p(X,Z)}{q(Z)}$$. 
+
+At this point, one should ask: how can this equality useful? Well, to begin with, we already know from the derivation in previous section that values of KL will always be $$>=0$$. We also know that the value of $$p(X)$$, is within $$[0,1]$$, and therefore $$\log p(X)$$ will always be negative. We could then tell that $$\mathcal{L}$$ will always negative. 
+
+$$\mathcal{L}$$ could be interpreted as the Lower Bound of KL. One important thing to notice is that random variable X is given, and therefore the value of $$p(X)$$ is fixed. Because of that, you can see that as the value of $$\mathcal{L}$$ gets larger and closer to 0, the value of KL will grow smaller (also getting closer to 0).
+
+We could essentially control KL by perturbing $$\mathcal{L}$$! Lets emphasize this point again: by making the lower bound $$\mathcal{L}$$ less negative (larger), we are reducing the KL divergence. And so, reducing the KL divergence means that the quality of estimation of $$p(Z\mid X)$$ by $$q(Z)$$ is getting better.
+
+---
 
 That's it for this part! I hope at this point you will have a glimps of what variational inference does and how KL-Divergence could intuitively be used to achieve the objective. In later parts we will discuss briefly the rationale of KL-Divergence lower bound, and how would variational inference approach find $$q(Z)$$.
 
