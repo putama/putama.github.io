@@ -11,7 +11,7 @@ Hi everyone, welcome to my second post of Variational Inference step-by-step int
 ## Deriving Variational Inference
 Fundamental points that we have learn so far is that: minimizing KL divergence is equivalent to maximizing the lower bound $$\mathcal{L}$$, and it is easier and more convenient to do so. Now we will start the discussion that will be the gist of variational inference: how do we find $$q(Z)$$ that maximizes $$\mathcal{L}$$?.
 
-Lets suppose we have 2 sets of variables, namely $X$ and $Z$, where $$X = \{x_1, x_2, x_3\}$$ and $$Z = \{z_1, z_2, z_3\}$$. For the sake of convenient example, we pick 3 random variables for each (it could have been picked arbitrarily, though). We denote the join probability of these sets as $$p(X, Z) = p(x_1,x_2,x_3,z_1,z_2,z_3)$$.
+Lets suppose we have 2 sets of variables, namely $$X$$ and $$Z$$, where $$X = \{x_1, x_2, x_3\}$$ and $$Z = \{z_1, z_2, z_3\}$$. For the sake of convenient example, we pick 3 random variables for each (it could have been picked arbitrarily, though). We denote the join probability of these sets as $$p(X, Z) = p(x_1,x_2,x_3,z_1,z_2,z_3)$$.
 
 Remember that our ultimate objective is to find the conditional probability $$p(Z \mid X)$$, namely: $$p(z_1, z_2, z_3 \mid x_1, x_2,x_3)$$. By conditional probability rule, we can express the conditional probability as the joint over the marginal:
 

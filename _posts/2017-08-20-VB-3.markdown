@@ -41,17 +41,11 @@ In order to hold the property that $$f(X,Z)$$ to be a probability function that 
 \mathcal{K} = \frac{1}{e^{(E_{z_2,z_3} (\ln p(X, Z))}}
 \\]
 
-This should always be possible since we can pick $\mathcal{K}$ by arbitrarily split $$\mathcal{C}$$ into $$\mathcal{C}_1$$ and $$\mathcal{C}_2$$. We have shown that indeed $$f(X,Y)$$ is a probability function!
+This should always be possible since we can pick $$\mathcal{K}$$ by arbitrarily split $$\mathcal{C}$$ into $$\mathcal{C}_1$$ and $$\mathcal{C}_2$$. We have shown that indeed $$f(X,Y)$$ is a probability function!
 
 ---
 
-Having the property of $\ln f(X,Y)$ assured, we could substitute it back to the $\mathcal{L}$ equation. Namely:
-
-\\[
-\begin{aligned}
-\mathcal{L} & = \sum_{z_1} q(z_1) \Bigg[ \ln f(X,Y) + \mathcal{C}_2 \Bigg] - \sum_{a} q(z_1)\ln q(z_1)
-\end{aligned}
-\\]
+Having the property of $$\ln f(X,Y)$$ assured, we could substitute it back to the $$\mathcal{L}$$ equation. Namely:
 
 $$
 \begin{aligned}
