@@ -1,11 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "Variational Inference Step-by-Step (Part 2: Mean Field V.I.)"
 date:   2017-08-18 20:50:00
 categories: main
+comments: true
 ---
-
-# Variational Inference (Part 2: Mean Field V.I.) 
 Hi everyone, welcome to my second post of Variational Inference step-by-step introduction! In the previous post we have explained the reason that motivates the use of variational inference. We also introduced the importance of KL-divergence and how it used in the main idea of variational inference. In this post, we will discuss the idea of finding the variational distribution and how mean field variational inference could help us to do that.
 
 ## Deriving Variational Inference

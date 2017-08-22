@@ -1,13 +1,12 @@
 ---
-layout: default
+layout: post
 title:  "Variational Inference Step-by-Step (Part 1: Motivation)"
 date:   2017-08-17 9:50:00
 categories: main
+comments: true
 ---
 
-# Variational Inference (Part 1: Introduction) 
-
-Hi everybody! For the past few days I have been struggling to study Variational Inference from many resources. I found that many textbooks jump into rigorous details even before I can quite understand the intuition behind it. I'm writing this step-by-step explanations series of post mainly for myself and for those who share the same frustation in learning the subject. Enjoy!
+Hi everybody! For the past few days I have been struggling to study Variational Inference from many resources. I found that many textbooks jump into rigorous details even before I can quite understand the intuition behind it. Then these [series of tutorial videos](https://www.youtube.com/playlist?list=PLdk2fd27CQzSd1sQ3kBYL4vtv6GjXvPsE) by Chieh Wu from Northeastern University came to the rescue. His explanation is excellent and very intuitive for me. I wrote this step-by-step explanations series of post mainly as lecture notes for myself that heavily follows his videos. I hope this could be useful for those who share the same frustation in learning the subject. Enjoy!
 
 ## Motivation
 

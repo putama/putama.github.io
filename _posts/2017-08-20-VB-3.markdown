@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: post
 title:  "Variational Inference Step-by-Step (Part 3: Mean Field V.I. cont.)"
 date:   2017-08-20 18:50:00
 categories: main
+comments: true
 ---
 
 Hello everyone! Thanks for following the series so far. This post will be very likely to be the last part of the series. Due to the depth of the topic itself, we would not be able to cover it from end to end. Nonetheless, by the end of this post, we expected you to at least be familiar with the derivation of mean field variational inference. Enjoy!
