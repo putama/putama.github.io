@@ -6,6 +6,8 @@ categories: main
 comments: true
 ---
 
+---
+
 Hi everyone! In the [previous post]({{ site.url }}/main/2017/08/20/LM-notes.html) we have noted that least-squared regression is very prone to overfitting. Due to some assumptions used to derive it, L2 loss function is sensitive to outliers i.e. outliers can penalize the L2 loss function heavily, messing up the model entirely. You must have been aware that adding regularization terms helps to improve the robustness of the model. The regulazired L2 loss is expressed as follow:
 
 $$
