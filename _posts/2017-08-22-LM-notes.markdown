@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Linear Regression from Maximum Likelihood View"
-date:   2017-08-20 15:10:00
+date:   2017-08-24 15:10:00
 categories: main
 comments: true
 ---
