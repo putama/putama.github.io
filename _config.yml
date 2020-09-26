@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Prasetya Ajie Utama / Ajie"
+title                    : "Prasetya Ajie Utama"
 title_separator          : "-"
 name                     : &name "Prasetya Ajie Utama"
 description              : &description "personal description"
@@ -50,7 +50,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-google_site_verification :
+google_site_verification : "google-site-verification=qjyqeKRLU8d2VTw1-MT34NwZbKsj78YKXkpKOpE9XY8"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -101,7 +101,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/prasetya-utama/"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
