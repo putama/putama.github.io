@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Prasetya Ajie Utama / Ajie Utama"
+title                    : "Prasetya Ajie Utama / Ajie"
 title_separator          : "-"
 name                     : &name "Prasetya Ajie Utama"
 description              : &description "personal description"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Prasetya Ajie Utama"
+  name             : "Prasetya [Ajie] Utama"
   avatar           : "profile.png"
   bio              : "NLP at TU Darmstadt"
   location         : "Germany"
