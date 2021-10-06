@@ -8,17 +8,22 @@ redirect_from:
   - /about.html
 ---
 
-I am a 2nd year PhD student in the [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) at the [Department of Computer Science, Technical University Darmstadt](https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp), co-advised by [Prof. Iryna Gurevych](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/staff_ukp/prof_dr_iryna_gurevych/index.en.jsp) and [Nafise Sadat Moosavi](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/staff_ukp/detailseite_mitarbeiter_1_43136.en.jsp). Before joining UKP, I received my B.Sc. in Computer Science at the University of Indonesia, and later received my M.Sc. from Brown University, advised by [James Tompkin](http://jamestompkin.com/) and [Pedro Felzenszwalb](http://cs.brown.edu/people/pfelzens/).
+I am a 3rd year PhD student in the [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) at the [Department of Computer Science, Technical University Darmstadt](https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp), co-advised by [Prof. Iryna Gurevych](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/staff_ukp/prof_dr_iryna_gurevych/index.en.jsp) and [Nafise Sadat Moosavi](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/staff_ukp/detailseite_mitarbeiter_1_43136.en.jsp). Before joining UKP, I received my B.Sc. in Computer Science at the University of Indonesia, and later received my M.Sc. from Brown University, advised by [James Tompkin](http://jamestompkin.com/) and [Pedro Felzenszwalb](http://cs.brown.edu/people/pfelzens/).
 
 I am broadly interested in the problem of human language understanding using techniques from natural language processing and deep learning. My current research focuses on improving the generalization and robustness of neural network models for language understanding tasks, especially in adversarial settings, in which neural models are still lagging behind human performance. Prior to this, I also worked on a semantic parsing problem to translate natural language utterances to executable database queries.
 
 Publications
 ---
 
-* [Towards Debiasing NLU Models from Unknown Biases](https://openreview.net/pdf?id=UHpxm2K-jHE)<br>
+* [Avoiding Inference Heuristics in Few-shot Prompt-based Finetuning](https://arxiv.org/pdf/2109.04144.pdf)<br>
+	**Prasetya Ajie Utama**, Nafise Sadat Moosavi, Victor Sanh, Iryna Gurevych<br>
+	EMNLP 2021 - short paper<br>
+	Code: [github](https://github.com/UKPLab/emnlp2021-prompt-ft-heuristics)
+
+* [Towards Debiasing NLU Models from Unknown Biases](https://arxiv.org/pdf/2009.12303.pdf)<br>
 	**Prasetya Ajie Utama**, Nafise Sadat Moosavi, Iryna Gurevych<br>
 	EMNLP 2020 - long paper<br>
-	Code: coming soon!
+	Code: [github](https://github.com/UKPLab/emnlp2020-debiasing-unknown)
 
 * [Mind the Trade-off: Debiasing NLU Models without Degrading In-Distribution Performance](https://arxiv.org/pdf/2005.00315.pdf)<br>
 	**Prasetya Ajie Utama**, Nafise Sadat Moosavi, Iryna Gurevych<br>
