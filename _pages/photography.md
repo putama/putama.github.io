@@ -7,6 +7,8 @@ author_profile: true
 
 When I am not doing research 🔬, I like to cook 🍳, jog 🏃🏼‍♂️, lift weight 🏋🏼, and especially to travel 🚞 🚍 ✈️ and take pictures 📷 or making travel videos 🎥!
 
+Here are some pictures I took:
+
 ---
 
 Grand Canyon, 2018.
