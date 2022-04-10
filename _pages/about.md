@@ -8,12 +8,19 @@ redirect_from:
   - /about.html
 ---
 
-I am a 3rd year PhD student in the [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) at the [Department of Computer Science, Technical University Darmstadt](https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp), co-advised by [Prof. Iryna Gurevych](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/staff_ukp/prof_dr_iryna_gurevych/index.en.jsp) and [Nafise Sadat Moosavi](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/staff_ukp/detailseite_mitarbeiter_1_43136.en.jsp). Before joining UKP, I received my B.Sc. in Computer Science at the University of Indonesia, and later received my M.Sc. from Brown University, advised by [James Tompkin](http://jamestompkin.com/) and [Pedro Felzenszwalb](http://cs.brown.edu/people/pfelzens/).
+I am a 4th year PhD student in the [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) at the [Department of Computer Science, Technical University Darmstadt](https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp), co-advised by [Prof. Iryna Gurevych](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/staff_ukp/prof_dr_iryna_gurevych/index.en.jsp) and [Nafise Sadat Moosavi](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/staff_ukp/detailseite_mitarbeiter_1_43136.en.jsp). Before joining UKP, I received my B.Sc. in Computer Science at the University of Indonesia, and later received my M.Sc. from Brown University, advised by [James Tompkin](http://jamestompkin.com/) and [Pedro Felzenszwalb](http://cs.brown.edu/people/pfelzens/).
 
 I am broadly interested in the problem of human language understanding using techniques from natural language processing and deep learning. My current research focuses on improving the generalization and robustness of neural network models for language understanding tasks, especially in adversarial settings, in which neural models are still lagging behind human performance. Prior to this, I also worked on a semantic parsing problem to translate natural language utterances to executable database queries.
 
 Publications
 ---
+* Falsesum: Generating Document-level NLI Examples for Recognizing Factual Inconsistency in Summarization<br>
+	**Prasetya Ajie Utama**, Joshua Bambrick, Nafise Sadat Moosavi, Iryna Gurevych<br>
+	NAACL 2022 - long paper<br>
+	
+* IMPLI: Investigating NLI Models' Performance on Figurative Language<br>
+	Kevin Stowe, **Prasetya Ajie Utama**, Iryna Gurevych<br>
+	ACL 2022 - long paper<br>
 
 * [Avoiding Inference Heuristics in Few-shot Prompt-based Finetuning](https://arxiv.org/pdf/2109.04144.pdf)<br>
 	**Prasetya Ajie Utama**, Nafise Sadat Moosavi, Victor Sanh, Iryna Gurevych<br>
